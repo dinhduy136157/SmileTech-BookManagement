@@ -30,8 +30,7 @@ namespace BookManagement.Application
                 Console.WriteLine("5. Xem danh sách sách");
                 Console.WriteLine("6. Đọc nội dung sách");
                 Console.WriteLine("7. Ghi nội dung sách");
-                Console.WriteLine("8. Lưu danh sách Sách");
-                Console.WriteLine("9. Thoát");
+                Console.WriteLine("8. Thoát");
 
                 Console.Write("Chọn: ");
                 string choice = Console.ReadLine();
@@ -95,12 +94,7 @@ namespace BookManagement.Application
                         string content = Console.ReadLine();
                         service.WriteBookContent(id, content);
                         break;
-
                     case "8":
-                        service.ExportBooksToFile(dataFile);
-                        Console.WriteLine("Đã lưu.");
-                        break;
-                    case "9":
                         service.ExportBooksToFile(dataFile);
                         Console.WriteLine("Thoát...");
                         return;
