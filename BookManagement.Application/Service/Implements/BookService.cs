@@ -121,7 +121,7 @@ namespace BookManagement.Application.Service.Implements
 
             try
             {
-                File.WriteAllText(book.FilePath, content);
+                File.AppendAllText(book.FilePath, content);
                 Console.WriteLine("Đã ghi nội dung sách.");
             }
             catch (Exception ex)
